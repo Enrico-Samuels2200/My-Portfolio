@@ -1,0 +1,97 @@
+body {
+    background: url(images/cv/background.jpg); /*Imports background image.*/
+    background-size: cover; /*Makes the background image cover the entire page.*/
+}
+  
+#head{
+padding: 10px; /*Gives the header a padding of 10px.*/
+}
+
+#head img{ /*Edits the image with in the header.*/
+    height: 100px;
+    width: 120px;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 174, 255);
+    padding: 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+  
+#head h2{ /*Edits the heading with in the header.*/
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 30px;
+    color: #fff;
+}
+  
+.win1 h1, .win2 h1{ /*Edits the floating boxes headings.*/
+    font-family: sans-serif;
+    text-decoration: underline; /*Underlines the headings.*/
+    color: cyan; /*Changes heading color.*/
+}
+  
+.win1 p, .win2 p { /*Gives floating boxes 1 and 2 paragraph tags left margin 20px.*/
+    margin-left:20px;
+}
+  
+.win1 {
+    margin-top: 20px;
+    width: 900px;
+    float: left; /*Makes floating box 1 float left.*/    
+}
+  
+.win1 p {
+    color: rgb(255, 255, 255); /*Changes floating box 1 paragraph color to white.*/
+    font-size: 17px;
+}
+  
+.win1 h2, .win2 h2 { /*Edits the h2 heading of both floating box 1 and 2.*/
+    margin-left: 20px;
+    font-family: sans-serif;
+    font-size: 19px;
+    text-decoration: underline;    
+}
+  
+.win1 h2 { /*Edits color of floating box 1 h2.*/
+    color: red;
+}
+  
+.win1 ul{ /*Edits the unordered list of floating box 1.*/
+    font-family: sans-serif;
+    margin-left: 120px;
+    font-weight: bold;
+    color: rgb(218, 1, 1);
+}
+  
+.win1 ul li ul{ /*Edits the unordered list which is a child to another unordered list in floating box 1.*/
+    font-weight: bold;
+    color: rgb(109, 1, 1);
+}
+  
+.win2 { /*Edits floating box 2.*/
+    margin-top: 20px;
+    margin-right: 40px;
+    border: 1px solid rgb(0, 174, 255);
+    border-radius: 20px;
+    padding: 5px;   
+    float: right;
+}
+  
+.win2 h1 { /*Edits the h1 heading of floating box 2.*/
+    color: blue;
+    margin-right: 50px;
+}
+  
+.win2 p{ /*Edits the paragraph of floating box 2.*/
+    color: rgb(0, 0, 14);
+    font-weight: bold;
+    font-size: 17px;
+}
+  
+.win2 h2, ol { /*Edits the color of the ordered list of floating box 2.*/
+    color: red;
+}
+  
+.win2 ol { /*Gives the margin left 10px of the ordered list of floating box 2.*/
+    margin-left: 10px;
+}
