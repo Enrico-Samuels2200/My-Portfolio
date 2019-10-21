@@ -95,3 +95,31 @@ padding: 10px; /*Gives the header a padding of 10px.*/
 .win2 ol { /*Gives the margin left 10px of the ordered list of floating box 2.*/
     margin-left: 10px;
 }
+
+.displayWin {
+}
+
+.contactDisplay {
+    width: 150px;
+    height: 36px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.contactDisplay img {
+    position: relative;
+    border: 1px solid blue;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    float: left;
+}
+
+.contactDisplay p {
+    position: relative;
+    color: rgb(0, 217, 255);
+    line-height: 10%;
+    margin-left: 10px;
+    float: left;
+}
