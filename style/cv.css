@@ -5,10 +5,13 @@
 body {
     background: url(images/cv/background.jpg); /*Imports background image.*/
     background-size: cover; /*Makes the background image cover the entire page.*/
+    width: 100%;
+    height: 100%;
 }
   
 #head{
     padding: 10px; /*Gives the header a padding of 10px.*/
+    width: 100%;
 }
 
 #head img{ /*Edits the image with in the header.*/
@@ -28,87 +31,84 @@ body {
     color: #fff;
 }
   
-.win1 h1, .win2 h1{ /*Edits the floating boxes headings.*/
-    font-family: sans-serif;
+.overview h1, .window1 h1, .window2 h1{ /*Edits the floating boxes headings.*/
     text-decoration: underline; /*Underlines the headings.*/
     color: cyan; /*Changes heading color.*/
 }
   
-.win1 p, .win2 p { /*Gives floating boxes 1 and 2 paragraph tags left margin 20px.*/
+.overview p, .window1 p, .window2 p { /*Gives floating boxes 1 and 2 paragraph tags left margin 20px.*/
     margin-left:20px;
 }
   
-.win1 {
+.overview, .window1 {
     margin-top: 20px;
     width: 900px;
     float: left; /*Makes floating box 1 float left.*/    
 }
   
-.win1 p {
+.overview p, .window1 p {
     color: rgb(255, 255, 255); /*Changes floating box 1 paragraph color to white.*/
     font-size: 17px;
 }
   
-.win1 h2, .win2 h2 { /*Edits the h2 heading of both floating box 1 and 2.*/
+.window1 h2, .window2 h2 { /*Edits the h2 heading of both floating box 1 and 2.*/
     margin-left: 20px;
-    font-family: sans-serif;
     font-size: 19px;
     text-decoration: underline;    
 }
   
-.win1 h2 { /*Edits color of floating box 1 h2.*/
+.window1 h2 { /*Edits color of floating box 1 h2.*/
     color: red;
 }
-
-.win1 ul{ /*Edits the unordered list of floating box 1.*/
-    font-family: sans-serif;
+  
+.window1 ul{ /*Edits the unordered list of floating box 1.*/
     margin-left: 120px;
     font-weight: bold;
     color: rgb(218, 1, 1);
 }
-
-.win1 ul li ul{ /*Edits the unordered list which is a child to another unordered list in floating box 1.*/
+  
+.window1 ul li ul{ /*Edits the unordered list which is a child to another unordered list in floating box 1.*/
     font-weight: bold;
     color: rgb(109, 1, 1);
 }
-
-.win2 { /*Edits floating box 2.*/
+  
+footer, .window2 { /*Edits floating box 2.*/
     margin-top: 20px;
     margin-right: 40px;
     border: 1px solid rgb(0, 174, 255);
     border-radius: 20px;
     padding: 5px;   
     float: right;
-    display: block;
 }
   
-.win2 h1 { /*Edits the h1 heading of floating box 2.*/
+footer h1, .window2 h1 { /*Edits the h1 heading of floating box 2.*/
     color: blue;
     margin-right: 50px;
 }
-
-.win2 p{ /*Edits the paragraph of floating box 2.*/
+  
+footer p, .window2 p{ /*Edits the paragraph of floating box 2.*/
     color: rgb(0, 0, 14);
     font-weight: bold;
     font-size: 17px;
 }
-
-.win2 h2, ol { /*Edits the color of the ordered list of floating box 2.*/
+  
+.window2 h2, ol { /*Edits the color of the ordered list of floating box 2.*/
     color: red;
 }
-
-.win2 ol { /*Gives the margin left 10px of the ordered list of floating box 2.*/
+  
+.window2 ol { /*Gives the margin left 10px of the ordered list of floating box 2.*/
     margin-left: 10px;
 }
 
-.contactDisplay1, .contactDisplay2 {
+.contact, .contactDisplay {
     width: 150px;
-    height: 36px;
+    height: 96px;
     margin-left: 5%;
     margin-bottom: 5%;
+    position: relative;
 }
 
-.contactDisplay1 img, .contactDisplay2 img {
+.contact img, .contactDisplay img {
     position: relative;
     border: 1px solid blue;
     padding: 5px;
@@ -118,7 +118,7 @@ body {
     float: left;
 }
 
-.contactDisplay1 p, .contactDisplay2 p{
+.contact p, .contactDisplay p {
     position: relative;
     color: rgb(0, 217, 255);
     line-height: 10%;
@@ -127,110 +127,224 @@ body {
 }
 
 footer {
-    background-color: rgba(8, 97, 138, 0.329);
-    float: left;
-    width: 100%;
-    margin-top: 5%;
-    border-top: 2px solid rgb(0, 174, 255);
-    border-bottom: 2px solid rgb(0, 174, 255);
-    border-radius: 10px;
-    padding-left: 10px;
     display: none;
+    float: left;
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: none;
+    border-top: 1px solid rgb(0, 174, 255);    
+    width: 200%;
+    background-color: rgba(0, 162, 255, 0.096);
 }
 
-footer h2 {
-    color: rgb(1, 127, 245);
-    text-decoration: underline;
-    margin-top: 1%;
-}
+@media only screen and (max-width : 425px) and (min-width: 376px) {
+    body {
+        background-size: cover;
+    }
 
-.contactDisplay2 {
-    margin-top: 0%;
-    margin-bottom: 4%;
-    margin-left: 15%;
-    float: left
-}
+    h1 {
+        font-size: 50px;
+    }
 
-.contactDisplay2 img {
-    margin-bottom: 0px;
-    width: 35px;
-    height: 35px;
-}
+    #head img{ /*Edits the image with in the header.*/
+        height: 90px;
+        width: 100px;
+    }
+        
+    #head h2 {
+        margin-left: 1%;
+        color: rgb(0, 255, 255);
+    }
 
-.contactDisplay2 p {
-    line-height: 100%;
-}
+    .overview p, .window1 p, .window1 h2, .window1 ul {
+        font-size: 25px;  
+    }
 
-@media only screen and (max-width: 768px) and (min-width: 426px) {
-    .win2 {
+    .window2 {
         display: none;
     }
 
-    footer {
-        display: block;
-        width: 117%;
-    }
-
-    .contactDisplay2 {
-        margin-left: 14%;
-    }
-}
-
-@media only screen and (max-width: 425px) and (min-width: 376px) {
-    .win2 {
-        display: none;
-    }
-
-    footer {
-        display: block;
-        width: 216%;
-    }
-
-    .contactDisplay2 {
+    .contact {
+        float: left;
+        margin-top: 2%;
+        margin-bottom: 2%;
         margin-left: 10%;
     }
-}
 
-@media only screen and (max-width: 375px) and (min-width: 321px) {
-      
-    #head h2{ /*Edits the heading with in the header.*/
-        font-size: 25px;
-        margin-left: 5%;
+    .contact img {
+        width: 60px;
+        height: 60px;
+        margin-left: 29%;
+        float: none;
+    }
+    
+    .contact p {
+        color: rgb(0, 217, 255);
+        line-height: 0%;
+        font-size: 30px;
+        text-align: center;
+        float: none;
     }
 
-    .win2 {
+    footer {
+        display: block;
+        height: 150px;
+        width: 205.5%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+
+@media only screen and (max-width : 375px) and (min-width: 321px) {
+    body {
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    #head {
+        margin: 0;
+        width: 219%;
+    }
+
+    #head img{ /*Edits the image with in the header.*/
+        height: 150px;
+        width: 170px;
+    }
+        
+    #head h2{
+        margin-left: 25px;
+        font-size: 50px;
+        color: rgb(0, 255, 255);
+    }
+
+    .overview, .window1 {
+        font-size: 30px;  
+        width: 800px;
+    }
+
+    .overview p, .window1 h2, .window1 p, .window1 u {
+        font-size: 30px;
+    }
+
+    .window2 {
         display: none;
     }
 
     footer {
         display: block;
-        width: 246%;
     }
 
-    .contactDisplay2 {
+    .contact {
+        float: left;
+        margin-top: 2%;
+        margin-bottom: 2%;
         margin-left: 10%;
-        margin-bottom: 4%;
+    }
+
+    .contact img {
+        width: 80px;
+        height: 80px;
+        margin-left: 25%;
+        float: none;
+    }
+    
+    .contact p {
+        color: rgb(0, 217, 255);
+        line-height: 0%;
+        font-size: 30px;
+        text-align: center;
+        float: none;
+    }
+
+    footer {
+        height: 150px;
+        width: 233%;
+        margin-left: 1%;
+        margin-right: 1%;
     }
 }
 
-@media only screen and (max-width: 320px) and (min-width: 320px) {
-      
-    #head h2{ /*Edits the heading with in the header.*/
-        font-size: 18px;
-        margin-left: 5%;
+@media only screen and (max-width : 320px) and (min-width: 0px) {
+    body {
+        background-size: cover;
+        width: 95%;
     }
 
-    .win2 {
+    h1 {
+        font-size: 60px;
+    }
+
+    #head {
+        margin: 0;
+        width: 250%;
+    }
+
+    #head img{ /*Edits the image with in the header.*/
+        height: 150px;
+        width: 170px;
+    }
+        
+    #head h2{
+        margin-left: 25px;
+        font-size: 50px;
+        color: rgb(0, 255, 255);
+    }
+
+    .overview {
+        margin-top: 15%;
+        width: 200%;  
+    }
+
+    .overview p, .window1, .window2 {
+        font-size: 30px;  
+    }
+
+    .window1 {
+        width: 800px;
+    }
+
+    .window1 h2, .window1 p {
+        font-size: 30px;
+    }
+
+    .window2 {
         display: none;
     }
 
     footer {
         display: block;
-        width: 290%;
     }
 
-    .contactDisplay2 {
+    .contact {
+        float: left;
+        margin-top: 2%;
+        margin-bottom: 2%;
         margin-left: 10%;
-        margin-bottom: 4%;
+    }
+
+    .contact img {
+        width: 80px;
+        height: 80px;
+        margin-left: 25%;
+        float: none;
+    }
+    
+    .contact p {
+        color: rgb(0, 217, 255);
+        line-height: 0%;
+        font-size: 30px;
+        text-align: center;
+        float: none;
+    }
+
+    footer {
+        height: 150px;
+        width: 255%;
+        margin-left: 1%;
+        margin-right: 1%;
     }
 }
