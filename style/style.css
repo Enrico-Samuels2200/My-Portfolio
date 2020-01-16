@@ -21,9 +21,10 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
-.head {
+header {
     background-image: linear-gradient(rgb(19, 9, 1), rgb(107, 53, 22));
     border-radius: 15px;
     border: 4px solid rgb(114, 60, 29);
@@ -33,7 +34,7 @@ body{
     top: 0;
 }
 
-.head h1 {
+header h1 {
     margin-left: 5%;
     vertical-align: middle;
     text-decoration: none;
@@ -66,63 +67,106 @@ nav a:hover {
 }
 /*----------------------------------------Works-------------------------------------------*/
 
-.works {
-    margin-top: 5%;
-    margin-left: 5%;
-    position: relative;
-    display: grid;
-}
-
 .projectCategory {
     margin-top: 15%;
     text-align: center;
 }
 
-.projects{
-    margin-top: 5%;
-    margin-left: 6.5%;
-    display: inline-grid;
-    position: relative;
-    height: 300px;
-    width: 300px;
-    background-image: linear-gradient(rgba(163, 80, 13, 0.5), rgba(18, 20, 17));
-    border: 10px solid rgba(151, 90, 55, 0.5);
-    border-radius: 50px;
+.myProjects {
+    margin-top: 15%;
+    margin-left: 9%;
 }
 
-.projects p {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    font-size: 15px;
+.box {
+    margin: 0;
+    position: relative;
+    display: inline-flex;
+    width: 350px;
+    height: 350px;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+}
+
+.imgBx {
     position: absolute;
-    display: grid;
-    align-items: center;
-    text-align: center;
-    white-space: normal;
-    word-break: break-all;
-}
-
-.projects img {
-    position: relative;
-    object-fit: inherit;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
-    border-radius: 40px;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-    transition: ease 1s;
+    transition: 0.5s;
+    z-index: 2;
+    background: #000;
 }
 
-.projects img:hover {
-    clip-path: polygon(47% 54%, 100% 0%, 47% 54%, 0% 100%);
-    transition: ease 1s;
+.imgBx img {
+    transition: 0.5s;
+    width: 100%;
+    height: 100%
 }
 
-/* .projectName {
-    margin-top: 15%;
-} */
+.box:hover .imgBx {
+    transform: translateY(-100px);
+}
+
+.box:hover .imgBx img {
+    opacity: 0.5;
+}
+
+.text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 12px;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.text p {
+    line-height: 50px;
+    text-align: center;
+    font-size: 15px;
+    transition: 0.5s;
+    color: #fff;
+    transform: translateY(200px); /* Used to change height on y axis */
+    opacity: 0;
+}
+
+.box:hover .text p {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.details {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    background: #fff;
+    transform: translateY(250px);
+     z-index: 4;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+    z-index: 1;
+}
+
+.details h2 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: rgb(80, 73, 73);
+    text-align: center;
+}
+
+.details h2 span {
+    color: #bbb;
+    font-size: 16px;
+}
+
 
 /*------------------------------------------------My skills-------------------------------*/
 .skills {
@@ -280,5 +324,37 @@ nav a:hover {
 @media only screen and (max-width: 1366px) and (min-width: 1024px) {
     .works {
         margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 425px) and (min-width: 376px) {
+    header {
+        height: 35px;
+    }
+    
+    header h1 {
+        font-size: 19px;
+    }
+
+    nav { 
+        /* For now displaying as a block so I can simply make changes to rest of my webpage */
+        display: none;
+    }
+
+    .projectCategory {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .projects{
+        margin-top: 5%;
+        margin-left: 6.5%;
+        display: inline-grid;
+        position: relative;
+        height: 200px;
+        width: 200px;
+        background-image: linear-gradient(rgba(163, 80, 13, 0.5), rgba(18, 20, 17));
+        border: 10px solid rgba(151, 90, 55, 0.5);
+        border-radius: 50px;
     }
 }
