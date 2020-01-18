@@ -73,7 +73,7 @@ nav a:hover {
 }
 
 .myProjects {
-    margin-top: 15%;
+    margin-top: 5%;
     margin-left: 9%;
 }
 
@@ -118,7 +118,6 @@ nav a:hover {
     position: absolute;
     top: 40%;
     left: 50%;
-    font-size: 12px;
     transform: translate(-50%,-50%);
     z-index: 3;
     display: flex;
@@ -147,7 +146,7 @@ nav a:hover {
     top: 0;
     background: #fff;
     transform: translateY(250px);
-     z-index: 4;
+    z-index: 4;
     width: 100%;
     height: 100px;
     box-sizing: border-box;
@@ -228,14 +227,16 @@ nav a:hover {
 }
 
 #About1 {
+    position: relative;
     background: rgba(34, 34, 32, 0.4);
     border: 4px solid rgb(221, 84, 4);
-    border-radius: 15px;
+    border-radius: 30px;
     width: 50%;
     height: 50%;
     margin-top: 5%;
     margin-left: 5%;
     padding: 20px;
+    overflow: hidden;
 }
 
 #About1 h2 {
@@ -255,6 +256,7 @@ nav a:hover {
     margin-top: 5%;
     margin-left: 40%;
     padding: 20px;
+    overflow: hidden;
 }
 
 #About2 h2 {
@@ -274,6 +276,7 @@ nav a:hover {
     margin-top: 5%;
     margin-left: 5%;
     padding: 20px;
+    overflow: hidden;
 }
 
 #About3 h2 {
@@ -334,27 +337,348 @@ nav a:hover {
     
     header h1 {
         font-size: 19px;
-    }
+    }   
 
     nav { 
         /* For now displaying as a block so I can simply make changes to rest of my webpage */
         display: none;
     }
 
-    .projectCategory {
-        font-size: 25px;
-        text-align: center;
+    .myProjects {
+        margin-left: 9%;
     }
 
-    .projects{
-        margin-top: 5%;
-        margin-left: 6.5%;
-        display: inline-grid;
-        position: relative;
-        height: 200px;
-        width: 200px;
-        background-image: linear-gradient(rgba(163, 80, 13, 0.5), rgba(18, 20, 17));
-        border: 10px solid rgba(151, 90, 55, 0.5);
-        border-radius: 50px;
+    .box {
+        width: 175px;
+        height: 175px;
+    }
+
+    .box:hover {
+        width: 350px;
+        height: 335px;
+        transition: 3s;
+    }
+
+    .details {
+        transform: translateY(240px);
+    }
+
+    .text p {
+        font-size: 12px;
+    }
+
+    .skills {
+        margin-top: 25%;
+    }
+    
+    .skills h1 {
+        font-size: 30px;
+    }
+    
+    .skills h2, .iconDisplay p {
+        font-size: 20px;
+    }
+    
+    .skills img {
+        height: 100px;
+        width: 100px;
+    }
+
+    #about {
+        font-size: 30px;
+        margin-left: 0%;
+        margin-right: 50%;
+    }
+
+    #About1, #About2, #About3 {
+        border: 1px solid rgb(221, 84, 4);
+        width: 80%;
+        height: 60px;
+    }
+
+    #About1 p, #About2 p, #About3 p {
+        display: none;
+    }
+
+    #About1:hover {
+        height: 320px;
+        transition: 2s;
+    }
+
+    #About1:hover p, #About2:hover p, #About3:hover p {
+        display: block;
+    }
+
+    #About2:hover {
+        height: 180px;
+        transition: 2s;
+    }
+
+    #About3:hover {
+        height: 830px;
+        transition: 2s;
+    }
+
+    #About2 {
+        margin-left: 5%;
+    }
+
+    #About3 {
+        border: 1px solid rgb(221, 84, 4);
+        width: 80%;
+    }
+
+    #contact {
+        margin-top: 20%;
+        font-size: 30px;
+    }
+
+    .contactDisplay img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .contactDisplay p {
+        font-size: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 375px) and (min-width: 320px) {
+    header {
+        height: 35px;
+    }
+    
+    header h1 {
+        font-size: 19px;
+    }   
+
+    nav { 
+        /* For now displaying as a block so I can simply make changes to rest of my webpage */
+        display: none;
+    }
+
+    .myProjects {
+        margin-left: 9%;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        margin-left: 1%;
+    }
+
+    .box:hover {
+        width: 305px;
+        height: 300px;
+        transition: 3s;
+    }
+
+    .details {
+        transform: translateY(200px);
+    }
+
+    .text p {
+        font-size: 12px;
+        line-height: 35px;
+    }
+
+    .skills {
+        margin-top: 25%;
+    }
+    
+    .skills h1 {
+        font-size: 30px;
+    }
+    
+    .skills h2, .iconDisplay p {
+        font-size: 20px;
+    }
+    
+    .skills img {
+        height: 100px;
+        width: 100px;
+    }
+
+    #about {
+        font-size: 30px;
+        margin-left: 0%;
+        margin-right: 25%;
+    }
+
+    #About1, #About2, #About3 {
+        border: 1px solid rgb(221, 84, 4);
+        width: 80%;
+        height: 60px;
+    }
+
+    #About1 p, #About2 p, #About3 p {
+        display: none;
+        font-size: 16px;
+    }
+
+    #About1:hover p, #About2:hover p, #About3:hover p {
+        display: block;
+    }
+
+    #About1:hover {
+        height: 320px;
+        transition: 2s;
+    }
+
+    #About2:hover {
+        height: 190px;
+        transition: 2s;
+    }
+
+    #About3:hover {
+        height: 820px;
+        transition: 2s;
+    }
+
+    #About2 {
+        margin-left: 5%;
+    }
+
+    #About3 {
+        width: 80%;
+    }
+
+    #contact {
+        margin-top: 20%;
+        font-size: 30px;
+    }
+
+    .contactDisplay img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .contactDisplay p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 320px) and (min-width: 0px) {
+    header {
+        height: 35px;
+    }
+    
+    header h1 {
+        font-size: 15px;
+        line-height: 30px;
+    }   
+
+    nav { 
+        /* For now displaying as a block so I can simply make changes to rest of my webpage */
+        display: none;
+    }
+
+    .myProjects {
+        margin-left: 9%;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+        margin-left: 2%;
+    }
+
+    .box:hover {
+        width: 240px;
+        height: 240px;
+        transition: 3s;
+    }
+
+    .details {
+        transform: translateY(150px);
+    }
+
+    .details h2 {
+        font-size: 18px;
+    }
+
+    .details p {
+        font-size: 12px;
+    }
+
+    .text {
+        top: 30%;
+    }
+
+    .text p {
+        font-size: 10px;
+        line-height: 22px;
+    }
+    
+    .skills img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .skills p {
+        font-size: 15px;
+    }
+
+    #about {
+        font-size: 30px;
+        margin-right: 5%;
+        float: left;
+    }
+
+    #About1, #About2, #About3 {
+        border: 1px solid rgb(221, 84, 4);
+        width: 80%;
+        height: 59px;
+    }
+
+    #About1 h2, #About2 h2, #About3 h2 {
+        font-size: 21px;
+    }
+
+    #About1 p, #About2 p, #About3 p {
+        display: none;
+        font-size: 16px;
+    }
+
+    #About1:hover p, #About2:hover p, #About3:hover p {
+        display: block;
+    }
+
+    #About1:hover {
+        height: 325px;
+        transition: 2s;
+    }
+
+    #About2:hover {
+        height: 190px;
+        transition: 2s;
+    }
+
+    #About3:hover {
+        height: 880px;
+        transition: 2s;
+    }
+
+    #About2 {
+        margin-left: 5%;
+    }
+
+    #About3 {
+        width: 80%;
+    }
+
+    #contact {
+        margin-top: 20%;
+        font-size: 30px;
+    }
+
+    .contactDisplay img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .contactDisplay p {
+        font-size: 12px;
     }
 }
